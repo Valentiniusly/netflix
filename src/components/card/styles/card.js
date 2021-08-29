@@ -7,6 +7,7 @@ export const Title = styled.p`
   margin-left: 56px;
   margin-right: 56px;
   margin-top: 0;
+  margin-bottom: 5px;
 `;
 
 export const Container = styled.div`
@@ -150,8 +151,26 @@ export const Meta = styled.div`
 `;
 
 export const Entities = styled.div`
+  padding: 16px 0;
+  width: 100%;
+  overflow: visible;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  @media screen and (max-width: 600px) {
+    overflow-x: scroll;
+  }
+`;
+
+export const ScrollX = styled.div`
   display: flex;
   flex-direction: row;
+  @media screen and (max-width: 600px) {
+    width: 180vw;
+  }
 `;
 
 export const Item = styled.div`

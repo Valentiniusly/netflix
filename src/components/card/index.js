@@ -15,6 +15,7 @@ import {
   Meta,
   Item,
   Image,
+  ScrollX,
 } from './styles/card';
 
 export const FeatureContext = createContext();
@@ -49,7 +50,11 @@ Card.Text = function CardText({ children, ...restProps }) {
 };
 
 Card.Entities = function CardEntities({ children, ...restProps }) {
-  return <Entities {...restProps}>{children}</Entities>;
+  return (
+    <Entities {...restProps}>
+      <ScrollX>{children}</ScrollX>
+    </Entities>
+  );
 };
 
 Card.Meta = function CardMeta({ children, ...restProps }) {

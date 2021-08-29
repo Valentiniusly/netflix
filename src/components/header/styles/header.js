@@ -4,6 +4,7 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 export const Background = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100%;
   // prettier-ignore
   background: url(
 		${({ src }) =>
@@ -13,6 +14,7 @@ export const Background = styled.div`
   @media (max-width: 1100px) {
     ${({ dontShowOnSmallViewPort }) =>
       dontShowOnSmallViewPort && `background: none;`}
+    margin-bottom: 40px;
   }
 `;
 
